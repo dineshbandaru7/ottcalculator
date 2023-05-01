@@ -1,154 +1,170 @@
-.subscription{
-    background-color: #fffca8;
-    width: 220px;
-    height: 60px;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);
-}
-   
-h1{
-    color: rgb(255, 201, 170);
-    font-family: 'Poppins', sans-serif;
-}    
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="newottstyle.css">
+    <title>Ott Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aba9113145.js" crossorigin="anonymous"></script>
 
-        
-
-body {
-    background-color: #000000;
+</head>
+<body>
+  <h1>OTT SUBSCRIPTION CALCULATOR</h1>
+    <div class="container">
+        <div class="subscription netflix">
+            <label for="netflix">Netflix:</label>
+            <select id="netflix">
+              <option value="0">None</option>
+              <option value="149">Mobile (₹149/month)</option>
+              <option value="199">Basic (₹199/month)</option>
+              <option value="499">Standard (₹499/month)</option>
+              <option value="649">Premium (₹649/month)</option>
+            </select>
+          </div>
+          <div class="subscription prime">
+            <label for="prime">Prime Video:</label>
+            <select id="prime">
+              <option value="0">None</option>
+              <option value="299">Monthly (₹299/month)</option>
+              <option value="599">quatarly (₹599/3 months)</option>
+              <option value="1499">Yearly (₹1499/year)</option>
+            </select>
+          </div>
+          <div class="subscription disney">
+            <label for="disney">Disney+:</label>
+            <select id="disney">
+              <option value="0">None</option>
+              <option value="149">Mobile (₹149/3 months)</option>
+              <option value="899">Super (₹899/year)</option>
+              <option value="1499">Premium (₹1499/year)</option>
+            </select>
+          </div>
+          <div class="subscription zee">
+            <label for="zee">Zee5:</label>
+            <select id="zee">
+              <option value="0">None</option>
+              <option value="499">Mobile (₹499/year)</option>
+              <option value="799">Premium FHD (₹799/year)</option>
+              <option value="1499">Premium 4k (₹1499/year)</option>
+            </select>
+          </div>
+          <div class="subscription youtube">
+            <label for="youtube">YouTube Premium:</label>
+            <select id="youtube">
+              <option value="0">None</option>
+              <option value="129">Individual (₹129/month)</option>
+              <option value="189">Family (₹189/month)</option>
+              <option value="79">Student (₹79/month)</option>
+            </select>
+          </div>
+          
+          <div class="subscription spotify">
+            <label for="spotify">Spotify Premium:</label>
+            <select id="spotify">
+              <option value="0">None</option>
+              <option value="119">Individual (₹119/month)</option>
+              <option value="149">Duo (₹149/month)</option>
+              <option value="179">Family (₹179/month)</option>
+              <option value="59">Student (₹59/month)</option>
+            </select>
+          </div>
+          
+          <div class="subscription aha">
+            <label for="aha">Aha:</label>
+            <select id="aha">
+              <option value="0">None</option>
+              <option value="199">Telugu Quarterly (199₹/year)</option>
+              <option value="399">Telugu Annual (399₹/year)</option>
+              <option value="699">Gold (₹699/year)</option>
+            </select>
+          </div>
+          
+          <div class="subscription sony">
+            <label for="sonyliv">Sony Liv:</label>
+            <select id="sonyliv">
+              <option value="0">None</option>
+              <option value="299">LIV Premium (₹299/month)</option>
+              <option value="599">Mobile Only (₹599/year)</option>
+              <option value="699">LIV Premium (₹699/6 months)</option>
+              <option value="999">LIV Premium (₹999/year)</option>
+            </select>
+          </div>
+          <div class="subscription voot">
+            <label for="voot">Voot:</label>
+            <select id="voot">
+              <option value="0">None</option>
+              <option value="299">Mobile (₹299/year)</option>
+              <option value="499">Gold (₹499/year)</option>
+              <option value="599">Platinum (₹599/year)</option>
+            </select>
+          </div>
+          
+          <div class="subscription appletv">
+            <label for="apple">Apple TV+:</label>
+            <select id="apple">
+              <option value="0">None</option>
+              <option value="99">Monthly (₹99/month)</option>
+            </select>
+          </div>
+          
+          
+    </div>
+    <div class="retotal">
+      <div id="total">Total: ₹0.00</div>
+      <button onClick="window.location.reload()" class="reload"><i class="fa-solid fa-rotate-right"></i></button>
+    </div>
     
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
-.container{
-    width: 80%;
-    height: max-content;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: #ff9292;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    border-radius: 20px;
+    <script>
+      const netflixSelect = document.getElementById("netflix");
+      const primeSelect = document.getElementById("prime");
+      const disneySelect = document.getElementById("disney");
+      const zeeSelect = document.getElementById("zee");
+      const vootSelect = document.getElementById("voot");
+      const appleSelect = document.getElementById("apple");
+      const youtubeSelect = document.getElementById("youtube");
+      const spotifySelect = document.getElementById("spotify");
+      const ahaSelect = document.getElementById("aha");
+      const sonylivSelect = document.getElementById("sonyliv");
+      const totalDiv = document.getElementById("total");  
+
+      function calculateTotal() {
+        const netflixPrice = parseFloat(netflixSelect.value);
+        const primePrice = parseFloat(primeSelect.value);
+        const disneyPrice = parseFloat(disneySelect.value);
+        const zeePrice = parseFloat(zeeSelect.value);
+        const vootPrice = parseFloat(vootSelect.value);
+        const applePrice = parseFloat(appleSelect.value);
+        const youtubePrice = parseFloat(youtubeSelect.value);
+        const spotifyPrice = parseFloat(spotifySelect.value);
+        const ahaPrice = parseFloat(ahaSelect.value);
+        const sonylivPrice = parseFloat(sonylivSelect.value);
+        const total = 0.00 + netflixPrice + primePrice + disneyPrice + zeePrice + vootPrice + applePrice + youtubePrice + spotifyPrice + ahaPrice + sonylivPrice;
+        totalDiv.innerText = `Total: ₹${total.toLocaleString('en-US')}.00`;
+  
+      }
+
+      netflixSelect.addEventListener("change", calculateTotal);
+      primeSelect.addEventListener("change", calculateTotal);
+      disneySelect.addEventListener("change", calculateTotal);
+      zeeSelect.addEventListener("change", calculateTotal);
+      vootSelect.addEventListener("change", calculateTotal);
+      appleSelect.addEventListener("change", calculateTotal);
+
+      youtubeSelect.addEventListener("change", calculateTotal);
+      spotifySelect.addEventListener("change", calculateTotal);
+      ahaSelect.addEventListener("change", calculateTotal);
+      sonylivSelect.addEventListener("change", calculateTotal);
+    </script>
+
+
+
+
     
-    
-    
-}
 
-.subscription label{
-    font-size: 20px;
-    
-    
-}
-
-.subscription select{
-    background-color: rgb(255, 211, 190);
-    border-radius: 6px;
-    font-size: 18px;
-    border: none;
-    padding: 5px;
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 12px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.6px);
-    -webkit-backdrop-filter: blur(6.6px);
-    border: 1px solid rgba(255, 255, 255, 0.53);
 
 
     
-} 
-
-#total {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    margin-top: 30px;
-    width: fit-content;
-    height: fit-content;
-    background-color: bisque;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    border-radius: 30px;
-    letter-spacing: 1px;
-    padding: 15px;
-}
-
-.reload{
-    background-color: bisque;
-    font-size: 24px;
-    margin-top: 30px;
-    margin-left: 20px;
-    padding: 15px;
-    border-radius: 40px;
-}
-
-.reload:hover{
-    cursor: pointer;
-    
-}
-
-.retotal{
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
-.zee:hover {
-    background-image: linear-gradient(to right,rgb(167, 118, 72), #fec853 , rgb(180, 138, 98));
-}
-
-.netflix:hover{
-    background-image: linear-gradient(to right,rgb(59, 36, 36), #ff303a , rgb(73, 49, 49));
-}
-
-.prime:hover{
-    background-image: linear-gradient(to right,rgb(46, 49, 60), #5a96ef , rgb(43, 43, 54));
-}
-
-.disney:hover{
-    background-image: linear-gradient(to right,rgb(59, 76, 137), #91bdff ,rgb(86, 86, 149));
-}
-
-.youtube:hover{
-    background-image: linear-gradient(to right,rgb(143, 67, 67), #ff5858 ,rgb(145, 64, 64));
-    
-}
-
-.spotify:hover{
-    background-image: linear-gradient(to right,rgb(66, 149, 107), #71fc9a ,rgb(81, 139, 91));
-}
-
-.aha:hover{
-    background-image: linear-gradient(to right,rgb(173, 105, 66), #ffab3e ,rgb(178, 122, 66));
-}
-
-.sony:hover{
-    background-image: linear-gradient(to right,rgb(74, 113, 255), #feeb70 ,rgb(183, 53, 253));
-}
-
-.voot:hover:hover{
-    background-image: linear-gradient(to right,rgb(59, 76, 137), #e491ff ,rgb(86, 86, 149));
-}
-
-.appletv:hover{
-    background-image: linear-gradient(to right,rgb(94, 93, 93), #e5e4e4 ,rgb(78, 78, 78));
-}
-
-
-
+</body>
+</html>
