@@ -51,6 +51,7 @@ body {
 .subscription label{
     font-size: 20px;
     
+    
 }
 
 .subscription select{
@@ -60,11 +61,13 @@ body {
     border: none;
     padding: 5px;
     background: rgba(255, 255, 255, 0.16);
-border-radius: 12px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6.6px);
--webkit-backdrop-filter: blur(6.6px);
-border: 1px solid rgba(255, 255, 255, 0.53);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.53);
+
+
     
 } 
 
@@ -77,51 +80,75 @@ border: 1px solid rgba(255, 255, 255, 0.53);
     width: fit-content;
     height: fit-content;
     background-color: bisque;
-    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     border-radius: 30px;
+    letter-spacing: 1px;
     padding: 15px;
-  }
-
-/* .hulu {
-    background-image: linear-gradient(to right,rgb(20, 126, 20), #c5fe53 , rgb(54, 92, 51));
 }
 
-.netflix{
+.reload{
+    background-color: bisque;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.reload:hover{
+    cursor: pointer;
+    
+}
+
+.retotal{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+.zee:hover {
+    background-image: linear-gradient(to right,rgb(167, 118, 72), #fec853 , rgb(180, 138, 98));
+}
+
+.netflix:hover{
     background-image: linear-gradient(to right,rgb(59, 36, 36), #ff303a , rgb(73, 49, 49));
 }
 
-.prime{
+.prime:hover{
     background-image: linear-gradient(to right,rgb(46, 49, 60), #5a96ef , rgb(43, 43, 54));
 }
-.disney{
+
+.disney:hover{
     background-image: linear-gradient(to right,rgb(59, 76, 137), #91bdff ,rgb(86, 86, 149));
 }
 
-.youtube{
-    background-image: linear-gradient(to right,rgb(249, 45, 45), #faa2a2 ,rgb(255, 62, 62));
+.youtube:hover{
+    background-image: linear-gradient(to right,rgb(143, 67, 67), #ff5858 ,rgb(145, 64, 64));
     
 }
 
-.spotify{
+.spotify:hover{
     background-image: linear-gradient(to right,rgb(66, 149, 107), #71fc9a ,rgb(81, 139, 91));
 }
 
-.aha{
-    background-image: linear-gradient(to right,rgb(248, 143, 83), #ffba74 ,rgb(255, 165, 48));
+.aha:hover{
+    background-image: linear-gradient(to right,rgb(173, 105, 66), #ffab3e ,rgb(178, 122, 66));
 }
 
-.sony{
+.sony:hover{
     background-image: linear-gradient(to right,rgb(74, 113, 255), #feeb70 ,rgb(183, 53, 253));
 }
 
-.hbo{
+.voot:hover:hover{
     background-image: linear-gradient(to right,rgb(59, 76, 137), #e491ff ,rgb(86, 86, 149));
 }
 
-.appletv{
+.appletv:hover{
     background-image: linear-gradient(to right,rgb(94, 93, 93), #e5e4e4 ,rgb(78, 78, 78));
 }
 
-.paramount{
-    background-image: linear-gradient(to right,rgb(109, 109, 210), #fee1ad ,rgb(109, 109, 210));
-} */
+
+
