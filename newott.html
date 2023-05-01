@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="newottstyle.css">
+    <title>Ott Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>OTT SUBSCRIPTION CALCULATOR</h1>
+    <div class="container">
+        <div class="subscription netflix">
+            <label for="netflix">Netflix:</label>
+            <select id="netflix">
+              <option value="0">None</option>
+              <option value="8.99">Basic ($8.99/month)</option>
+              <option value="13.99">Standard ($13.99/month)</option>
+              <option value="17.99">Premium ($17.99/month)</option>
+            </select>
+          </div>
+          <div class="subscription prime">
+            <label for="prime">Prime Video:</label>
+            <select id="prime">
+              <option value="0">None</option>
+              <option value="8.99">Monthly ($8.99/month)</option>
+              <option value="99">Yearly ($99/year)</option>
+            </select>
+          </div>
+          <div class="subscription disney">
+            <label for="disney">Disney+:</label>
+            <select id="disney">
+              <option value="0">None</option>
+              <option value="7.99">Monthly ($7.99/month)</option>
+              <option value="79.99">Yearly ($79.99/year)</option>
+            </select>
+          </div>
+          <div class="subscription hulu">
+            <label for="hulu">Hulu:</label>
+            <select id="hulu">
+              <option value="0">None</option>
+              <option value="5.99">Basic ($5.99/month)</option>
+              <option value="11.99">Premium ($11.99/month)</option>
+              <option value="19.99">No Ads ($19.99/month)</option>
+            </select>
+          </div>
+          <div class="subscription youtube">
+            <label for="youtube">YouTube Premium:</label>
+            <select id="youtube">
+              <option value="0">None</option>
+              <option value="11.99">Individual ($11.99/month)</option>
+              <option value="17.99">Family ($17.99/month)</option>
+              <option value="6.99">Student ($6.99/month)</option>
+            </select>
+          </div>
+          
+          <div class="subscription spotify">
+            <label for="spotify">Spotify Premium:</label>
+            <select id="spotify">
+              <option value="0">None</option>
+              <option value="9.99">Individual ($9.99/month)</option>
+              <option value="14.99">Duo ($14.99/month)</option>
+              <option value="4.99">Student ($4.99/month)</option>
+              <option value="14.99">Family ($14.99/month)</option>
+            </select>
+          </div>
+          
+          <div class="subscription aha">
+            <label for="aha">Aha:</label>
+            <select id="aha">
+              <option value="0">None</option>
+              <option value="7.99">Monthly ($7.99/month)</option>
+              <option value="79.99">Yearly ($79.99/year)</option>
+            </select>
+          </div>
+          
+          <div class="subscription sony">
+            <label for="sonyliv">Sony Liv:</label>
+            <select id="sonyliv">
+              <option value="0">None</option>
+              <option value="99">Premium ($999/year)</option>
+              <option value="29">Special+ ($299/year)</option>
+            </select>
+          </div>
+          <div class="subscription hbo">
+            <label for="hbomax">HBO Max:</label>
+            <select id="hbomax">
+              <option value="0">None</option>
+              <option value="14.99">Monthly ($14.99/month)</option>
+            </select>
+          </div>
+          
+          <div class="subscription appletv">
+            <label for="apple">Apple TV+:</label>
+            <select id="apple">
+              <option value="0">None</option>
+              <option value="4.99">Monthly ($4.99/month)</option>
+            </select>
+          </div>
+          
+          <div class="subscription paramount">
+            <label for="paramount">Paramount+:</label>
+            <select id="paramount">
+              <option value="0">None</option>
+              <option value="5.99">Basic ($5.99/month)</option>
+              <option value="9.99">Premium ($9.99/month)</option>
+            </select>
+          </div>
+    </div>
+    <div id="total">Total: $0.00</div>
+
+    <script>
+      const netflixSelect = document.getElementById("netflix");
+      const primeSelect = document.getElementById("prime");
+      const disneySelect = document.getElementById("disney");
+      const huluSelect = document.getElementById("hulu");
+      const hbomaxSelect = document.getElementById("hbomax");
+      const appleSelect = document.getElementById("apple");
+      const paramountSelect = document.getElementById("paramount");
+      const youtubeSelect = document.getElementById("youtube");
+      const spotifySelect = document.getElementById("spotify");
+      const ahaSelect = document.getElementById("aha");
+      const sonylivSelect = document.getElementById("sonyliv");
+      const totalDiv = document.getElementById("total");  
+
+      function calculateTotal() {
+        const netflixPrice = parseFloat(netflixSelect.value);
+        const primePrice = parseFloat(primeSelect.value);
+        const disneyPrice = parseFloat(disneySelect.value);
+        const huluPrice = parseFloat(huluSelect.value);
+        const hbomaxPrice = parseFloat(hbomaxSelect.value);
+        const applePrice = parseFloat(appleSelect.value);
+        const paramountPrice = parseFloat(paramountSelect.value);
+        const youtubePrice = parseFloat(youtubeSelect.value);
+        const spotifyPrice = parseFloat(spotifySelect.value);
+        const ahaPrice = parseFloat(ahaSelect.value);
+        const sonylivPrice = parseFloat(sonylivSelect.value);
+        const total = 0 + netflixPrice + primePrice + disneyPrice + huluPrice + hbomaxPrice + applePrice + paramountPrice + youtubePrice + spotifyPrice + ahaPrice + sonylivPrice;
+        totalDiv.innerText = `Total: $${total.toFixed(2)}`;
+      }
+
+      netflixSelect.addEventListener("change", calculateTotal);
+      primeSelect.addEventListener("change", calculateTotal);
+      disneySelect.addEventListener("change", calculateTotal);
+      huluSelect.addEventListener("change", calculateTotal);
+      hbomaxSelect.addEventListener("change", calculateTotal);
+      appleSelect.addEventListener("change", calculateTotal);
+      paramountSelect.addEventListener("change", calculateTotal);
+      youtubeSelect.addEventListener("change", calculateTotal);
+      spotifySelect.addEventListener("change", calculateTotal);
+      ahaSelect.addEventListener("change", calculateTotal);
+      sonylivSelect.addEventListener("change", calculateTotal);
+    </script>
+
+
+
+
+    
+
+
+
+    
+</body>
+</html>
