@@ -48,7 +48,7 @@ h1{
 
 body {
     background-color: #292929;
-    
+    height: 100vh;
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
