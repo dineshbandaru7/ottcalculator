@@ -1,0 +1,226 @@
+.subscription{
+    background-color: #fff29a;
+    width: 220px;
+    height: 60px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    border-style: solid;
+    border-width: 2px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-color: #292929;
+    transition: 0.3s;
+}
+
+header{
+    border-bottom: 1px solid #ccc;
+    
+    width: 90%;
+}
+
+.logo{
+    
+    margin-left: 40px;
+    height: 100px;
+}
+
+
+.subscription:hover{
+    box-shadow: 11px 10px 29px -11px rgba(0,0,0,0.58);
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+}
+
+h1{
+    color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+    
+}    
+
+        
+
+body {
+    background-color: #292929;
+    position: top;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: max-content;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fd9c97;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    
+    
+    
+}
+
+.subscription label{
+    font-size: 20px;
+    
+    
+}
+
+.subscription select{
+    background-color: rgb(255, 211, 190);
+    border-radius: 6px;
+    font-size: 18px;
+    border: none;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.53);
+
+
+    
+} 
+
+#total {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: bisque; */
+    
+    border: 2px solid antiquewhite;
+    color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+#total:hover{
+    background-color: antiquewhite;
+    color: #292929;
+}
+
+
+.reload{
+    /* background-color: bisque; */
+    font-size: 24px;
+    background: none;
+    color: antiquewhite;
+    margin-top: 30px;
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 40px;
+    border: 2px solid antiquewhite;
+    transition: 0.5s;
+}
+
+.reload:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: #292929;
+    
+}
+
+.reload:active{
+    transform: rotate(90deg);
+}
+
+.retotal{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+.zee:hover {
+    background-image: linear-gradient(to right,rgb(167, 118, 72), #fec853 , rgb(180, 138, 98));
+    
+}
+
+.netflix:hover{
+    background: linear-gradient(90deg, rgba(158,48,53,1) 0%, rgba(252,66,75,1) 50%, rgba(164,46,52,1) 100%);
+}
+
+.prime:hover{
+    background: linear-gradient(90deg, rgba(28,93,145,1) 0%, rgba(66,169,254,1) 50%, rgba(31,104,163,1) 100%);
+}
+
+.disney:hover{
+    background-image: linear-gradient(to right,rgb(59, 76, 137), #91bdff ,rgb(86, 86, 149));
+}
+
+.youtube:hover{
+    background: linear-gradient(90deg, rgba(190,54,54,1) 0%, rgba(255,30,30,1) 50%, rgba(190,49,49,1) 100%);
+    
+}
+
+.spotify:hover{
+    background-image: linear-gradient(to right,rgb(66, 149, 107), #71fc9a ,rgb(81, 139, 91));
+}
+
+
+.aha:hover{
+    background: linear-gradient(90deg, rgba(193,85,8,1) 0%, rgba(255,139,56,1) 50%, rgba(196,87,8,1) 100%);
+    
+}
+
+.sony:hover{
+    background-image: linear-gradient(to right,rgb(74, 113, 255), #feeb70 ,rgb(183, 53, 253));
+}
+
+.voot:hover:hover{
+    background-image: linear-gradient(to right,rgb(59, 76, 137), #e491ff ,rgb(86, 86, 149));
+}
+
+.appletv:hover{
+    background: linear-gradient(90deg, rgba(111,111,111,1) 0%, rgba(208,208,208,1) 50%, rgba(124,124,124,1) 100%);
+}
+
+.erosnow:hover{
+    background: linear-gradient(90deg, rgba(59,140,112,1) 0%, rgba(106,191,255,1) 50%, rgba(59,140,112,1) 100%);
+}
+
+.sunnxt:hover{
+    background: linear-gradient(90deg, rgba(195,23,35,1) 0%, rgba(255,119,140,1) 50%, rgba(208,33,33,1) 100%);
+}
+
+
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  
